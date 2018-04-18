@@ -1,20 +1,20 @@
 class Character {
-  constructor(userName, characterClass, health) {
+  constructor(userName, health) {
     this.userName = userName;
-    this.characterClass = characterClass;
     this.health = health;
+    this.characterClass;
   }
 
-  setClass() {
-    const Classes = {
-      "hacks": "H4CKX",
-      "martian": "Martian Man",
-      "ai": "AI"
-    }
+  setClass(hacks) {
+    this.characterClass = hacks;
+    // const martian = this.characterClass;
 
-    let this.characterClass = Classes.hacks;
+
   }
 }
 
+// function characterClass() {
+//   if this keys is pressed, select this character.
+// }
+
 export { Character };
-export { setClass };
