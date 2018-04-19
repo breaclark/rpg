@@ -14,6 +14,7 @@ $(document).ready(function(){
   let player1 = new Character('Johnny', 1);
   let player2 = new Character('Brea', 2);
   let battle = new Battle(player1, player2);
+
   //Phase 1 stuff
   $(document).keypress(function(event){
     if(event.keyCode >= 49 && event.keyCode <= 51) {
@@ -48,6 +49,7 @@ $(document).ready(function(){
   //Phase 2 stuff
   $("#start").click(function(){
     let i = 10;
+    clickCounter = true;
     setInterval(function () {
       if(i > 0){
         $("#countdown").text(i-1);
@@ -57,18 +59,32 @@ $(document).ready(function(){
       }
     }, 1000);
     $(document).keypress(function(event){
-      if(event.keyCode === 109 && clickCounter === true) {
+      if(event.keyCode === 118 && clickCounter === true) {
         mcount ++;
         $("#m-count").text(mcount);
       }
-      if(event.keyCode === 118 && clickCounter === true) {
+      if(event.keyCode === 109 && clickCounter === true) {
         vcount ++;
         $("#v-count").text(vcount);
+      }
+      if(vcount >= 150){
+        $("#phase-2").hide();
+        $("#win-phase h3").text("PLAYER 2 WINS");
+      }
+      if(mcount >= 150){
+        $("#phase-2").hide();
+        $("#win-phase h3").text("PLAYER 1 WINS");
       }
     });
     setTimeout(function(){
       clickCounter = false;
       battle.phaseTwo(vcount, mcount);
+      if(battle.winPhase()){
+        console.log(battle.winPhase() + "wins");
+      }
+      else {
+        console.log("no one wins yet");
+      }
     }, 10000);
   });
 
