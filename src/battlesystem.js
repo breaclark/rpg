@@ -4,9 +4,9 @@ class Battle {
     this.player2 = player2;
   }
 
-  phaseOne() {
-    // Choose Character
-    // move to phase 2
+  phaseOne(player1class, player2class) {
+    this.player1.setClass(player1class);
+    this.player2.setClass(player2class);
   }
 
   phaseTwo() {
