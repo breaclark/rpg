@@ -3,9 +3,12 @@ import { Ai } from './ai.js';
 import { Martian } from './martian.js';
 
 class Character {
-  constructor(userName, health) {
+  constructor(userName, player) {
     this.userName = userName;
-    this.health = health;
+    this.player = player;
+    this.health = 150;
+    this.points = 0;
+    this.wins = 0;
     this.characterClass;
   }
 
@@ -21,7 +24,6 @@ class Character {
     keyMap.set(57, new Martian(this.userName));
     this.characterClass = keyMap.get(input);
   }
-
 
 }
 export { Character };

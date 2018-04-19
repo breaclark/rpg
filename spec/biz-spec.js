@@ -1,4 +1,6 @@
 import { Character } from './../src/characterset.js';
+import { Ai } from './../src/ai.js';
+import { Hacks } from './../src/hacks.js';
 // import { setClass } from './src/biz.js';
 
 describe('Character', function() {
@@ -6,8 +8,8 @@ describe('Character', function() {
   let player2;
 
   beforeEach(function() {
-    player1 = new Character('Johnny',1, 150);
-    player2 = new Character('Brea',2, 150);
+    player1 = new Character('Johnny',1);
+    player2 = new Character('Brea',2);
     return (player1, player2);
   });
 
@@ -19,11 +21,14 @@ describe('Character', function() {
   it('should output that a hacks class was created and is set to Character.characterClass', function() {
     player1.setClass(50);
     expect(player1.characterClass.userName).toEqual('Johnny');
+    expect(player1.characterClass).toEqual(jasmine.any(Ai));
   });
 
   it('should output that a hacks class was created and is set to Character.characterClass', function() {
-    player2.setClass(57);
+    player2.setClass(55);
     expect(player2.characterClass.userName).toEqual('Brea');
+    expect(player2.characterClass).toEqual(jasmine.any(Hacks));
+
   });
 
 });
