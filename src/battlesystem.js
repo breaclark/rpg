@@ -31,3 +31,5 @@ class Battle {
     // repeat phases 2 and 3 until win condition is met
   }
 }
+
+export { Battle };
