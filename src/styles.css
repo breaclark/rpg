@@ -1,3 +1,42 @@
 body {
-  background-color: #7FDBFF;
+  background-image: url("/img/space_background.png");
+}
+
+.container {
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  text-align: center;
+}
+
+.p1 {
+  min-height: 150px;
+  margin: 10px;
+  background-color: #ed7171;
+  border-radius: 10px;
+}
+
+.p2 {
+  min-height: 150px;
+  margin: 10px;
+  background-color: #70cbed;
+  border-radius: 10px;
+}
+
+.col h6 {
+  font-size: 26px;
+}
+
+#phase-2 {
+  display: none;
+}
+
+img {
+  width: 100px;
+  margin: 10px;
 }
