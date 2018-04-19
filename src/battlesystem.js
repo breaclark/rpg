@@ -22,23 +22,19 @@ class Battle {
     this.player2.health -= player1KeyStrokes;
   }
 
-  phaseThree(player1health, player2health) {
+  // optionalPhase() {
+  //
+  // }
+
+  winPhase(player1health, player2health) {
     this.player1.health = player1health;
     this.player2.health = player2health;
-    console.log(player1health);
-    console.log(player2health);
-    if (player1health >= 0) {
-      // TO FIX : NEEDS FRONT END WIREUP
-      // change return playerhealth to coresponding variable for front end display
-      return player2health
-    } else if (player2health >= 0) {
-      return player1health;
+    if (player1health <= 0) {
+      return this.player2.wins += 1
+    } else if (player2health <= 0) {
+      return this.player1.wins += 1
     }
   }
-//
-//   phaseFour() {
-//     // repeat phases 2 and 3 until win condition is met
-//   }
 }
 
 export { Battle };
