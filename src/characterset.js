@@ -1,6 +1,6 @@
 import { Hacks } from './hacks.js';
 import { Ai } from './ai.js';
-// import { Martian } from './martian.js';
+import { Martian } from './martian.js';
 
 class Character {
   constructor(userName, health) {
@@ -16,9 +16,9 @@ class Character {
 
     keyMap.set(50, new Ai(this.userName));
     keyMap.set(56, new Ai(this.userName));
-    //
-    // keyMap.set(49, new Hacks('Johnny'));
-    // keyMap.set(49, new Hacks('Johnny'));
+
+    keyMap.set(51, new Martian(this.userName));
+    keyMap.set(57, new Martian(this.userName));
     this.characterClass = keyMap.get(input);
   }
 
