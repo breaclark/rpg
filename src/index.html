@@ -1,9 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Memory</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <title></title>
   </head>
   <body>
-
+    <div class="container">
+      <h1>Space Battle!</h1>
+      <div id="phase-1">
+        <div class="row">
+          <div class="col">
+            <h3>Are you ready to battle?</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col p1">
+            <h6> Player 1: Press 1 to be a Hacker, 2 to be an AI, or 3 to be a Martian.</h6>
+          </div>
+          <div class="col p2">
+            <h6> Player 2: Press 7 to be a Hacker, 8 to be an AI, or 9 to be a Martian.</h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h6>Make your choices now!</h6>
+          </div>
+        </div>
+      </div>
+      <div id="phase-2">
+        <div class="row">
+          <div class="col">
+            <h3>When you're ready, hit start. You'll have 10 seconds to deal as much damage as you can to your oponent!</h3>
+            <button type="button" id="start" class="btn btn-dark">Start</button>
+            <div>
+              <h2 id="countdown">10</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col p1">
+            <img id="p1-type" src="">
+            <h3>Player 1: Tap v as fast as you can to deal damage to your oponent!</h3>
+            <h3 id="m-count"></h3>
+          </div>
+          <div class="col p2">
+            <img id="p2-type" src="">
+            <h3>Player 2: Tap m as fast as you can to deal damage to your oponent!</h3>
+            <h3 id="v-count"></h3>
+          </div>
+        </div>
+      </div>
+      <div id="win-phase">
+        <h3></h3>
+      </div>
+      <footer class="footer">
+        Icon made by Freepik from www.flaticon.com
+      </footer>
+  </div>
   </body>
 </html>

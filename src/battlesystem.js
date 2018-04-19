@@ -26,13 +26,15 @@ class Battle {
   //
   // }
 
-  winPhase(player1health, player2health) {
-    this.player1.health = player1health;
-    this.player2.health = player2health;
-    if (player1health <= 0) {
-      return this.player2.wins += 1
-    } else if (player2health <= 0) {
-      return this.player1.wins += 1
+  winPhase() {
+    if (this.player1.health <= 0) {
+      this.player2.wins += 1;
+      return "player 2";
+    } else if (this.player2.health <= 0) {
+      this.player1.wins += 1;
+      return "player 1";
+    } else {
+      return;
     }
   }
 }

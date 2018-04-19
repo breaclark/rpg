@@ -7,7 +7,6 @@ class Character {
     this.userName = userName;
     this.player = player;
     this.health = 150;
-    this.points = 0;
     this.wins = 0;
     this.characterClass;
   }
