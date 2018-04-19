@@ -6,10 +6,13 @@ describe('Character', function() {
 
   beforeEach(function() {
     newCharacter = new Character('Johnny', 150);
-    console.log(newCharacter);
+    return newCharacter;
   });
 
-  // it('should create a new Character object with the name Johnny, class of hacks, and 150 health', function() {
-  //
-  // });
+  it('should create a new Character object with the name Johnny, class of hacks, and 150 health', function() {
+    expect(newCharacter.userName).toEqual('Johnny');
+    expect(newCharacter.health).toEqual(150);
+    newCharacter.setClass('hacks');
+    expect(newCharacter.characterClass).toEqual('hacks');
+  });
 });
