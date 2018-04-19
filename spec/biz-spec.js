@@ -41,4 +41,11 @@ describe('Character', function() {
     expect(battle.player2.userName).toEqual('Brea');
   });
 
+  it('should test phaseOne to make sure that player1 is set correctly via user input', function() {
+    battle = new Battle(player1, player2);
+    battle.phaseOne(49, 56);
+    expect(player1.characterClass).toEqual(jasmine.any(Hacks));
+    expect(player2.characterClass).toEqual(jasmine.any(Ai));
+  })
+
 });
