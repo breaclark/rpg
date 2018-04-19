@@ -14,17 +14,13 @@ class Battle {
         (player1 === 'martian' && player2 === 'hacks') || (player1 === 'hacks' && player2 === 'ai') || (player1 === 'ai' && player2 === 'martian')
       ) ? 1 : 2;
     this.multiplier = buff;
-    console.log(buff);
   };
 
-//   phaseTwo(player1KeyStrokes, player2KeyStrokes) {
-//
-//     //front end passes back number of keystrokes
-//     // add multipliers
-//     // add totals from keystrokes
-//     // subtract from each players health
-//     // move to phase 3
-//   }
+  phaseTwo(player1KeyStrokes, player2KeyStrokes) {
+    this.multiplier === 1 ? (player1KeyStrokes = Math.floor(player1KeyStrokes * 1.1)) : (player2KeyStrokes =  Math.floor(player2KeyStrokes * 1.1));
+    this.player1.health -= player2KeyStrokes;
+    this.player2.health -= player1KeyStrokes;
+  }
 //
 //   phaseThree() {
 //     // Check to see is a players health was reduced to 0
