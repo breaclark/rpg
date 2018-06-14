@@ -1,5 +1,32 @@
 # ROCK PAPER SCISSORS EXTREME EDITION
 
+## Setup/Installation Requirements
+
+* Clone Repository
+* Run npm install
+* Run ng serve --open
+
+## Known Bugs
+
+No Known Bugs
+
+## Support and contact details
+
+Contact me at breatortilla@gmail.com
+
+## Technologies Used
+
+* HTML
+* CSS
+* Javascript
+* Typescript
+* Angular
+
+### License
+
+Copyright (c) 2018 **Brea Clark**
+
+# How it Works
 
 ## Character Class & Attributes
 ### H4ckx
